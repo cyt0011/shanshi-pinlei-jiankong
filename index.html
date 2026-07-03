@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>膳食 AI 监控台</title>
+    <link rel="stylesheet" href="assets/styles.css?v=6" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="监控目录">
+        <div class="brand-block">
+          <div class="brand-mark" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div>
+            <p class="eyebrow">Nutrition AI ERP</p>
+            <h1>膳食 AI 监控台</h1>
+          </div>
+        </div>
+        <div class="target-strip">
+          <span>下半年目标</span>
+          <strong>4000 万</strong>
+        </div>
+        <nav id="moduleNav" class="module-nav"></nav>
+      </aside>
+
+      <main class="workspace">
+        <header class="topbar">
+          <div>
+            <p id="modulePath" class="eyebrow">产品开发中心 / 新品开发审批</p>
+            <h2 id="moduleTitle">新品开发审批</h2>
+          </div>
+          <div class="topbar-actions">
+            <button id="exportJsonBtn" class="icon-button" type="button" title="导出当前演示数据">
+              <span class="button-icon">↓</span>
+              导出
+            </button>
+            <button id="resetDemoBtn" class="icon-button subtle" type="button" title="恢复演示数据">
+              <span class="button-icon">↻</span>
+              恢复演示
+            </button>
+          </div>
+        </header>
+
+        <section class="process-line" aria-label="流程状态">
+          <button data-module="sku-review" type="button">新品审批</button>
+          <button data-module="label-score" type="button">标签评分</button>
+          <button data-module="inbound" type="button">仓库入库</button>
+          <button data-module="location-care" type="button">库位保管</button>
+          <button data-module="shelf-life" type="button">效期红线</button>
+          <button data-module="pallet" type="button">共享货盘</button>
+          <button data-module="hero-sku" type="button">英雄 SKU</button>
+        </section>
+
+        <section id="content" class="content" aria-live="polite"></section>
+      </main>
+    </div>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script src="assets/app.js?v=6"></script>
+  </body>
+</html>
