@@ -245,6 +245,11 @@ h4 {
   align-items: center;
   justify-content: center;
   white-space: nowrap;
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease,
+    transform 160ms ease;
 }
 
 .icon-button,
@@ -256,6 +261,7 @@ h4 {
 .icon-button:hover,
 .primary-button:hover {
   background: var(--teal-dark);
+  transform: translateY(-1px);
 }
 
 .icon-button.subtle,
@@ -268,6 +274,8 @@ h4 {
 .subtle-button:hover,
 .icon-button.subtle:hover {
   background: #f4f7f5;
+  border-color: #9fb2a8;
+  transform: translateY(-1px);
 }
 
 .danger-button {
@@ -281,9 +289,29 @@ h4 {
 }
 
 .button-icon {
-  width: 18px;
-  text-align: center;
-  font-weight: 800;
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  display: inline-grid;
+  place-items: center;
+  flex: 0 0 22px;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.button-icon svg {
+  width: 15px;
+  height: 15px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.icon-button.subtle .button-icon,
+.subtle-button .button-icon {
+  background: #eaf3ef;
+  color: var(--teal-dark);
 }
 
 .process-line {
